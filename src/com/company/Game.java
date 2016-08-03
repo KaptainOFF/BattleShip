@@ -1,11 +1,13 @@
 package com.company;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
     private Random rand = new Random();
     private int column = rand.nextInt(5);
     private int row = rand.nextInt(5);
+    Scanner scanner = new Scanner(System.in);
 
     public String[][] mBoard = new String[][] {
             {"O", "O", "O", "O", "O"},
@@ -30,6 +32,11 @@ public class Game {
             }
             System.out.print("\n");
         }
+    }
+
+    public int getPlayerRow() {
+        int playerRow = scanner.nextInt();
+        return playerRow;
     }
 
     public Game() {
