@@ -35,11 +35,8 @@ public class Game {
     }
 
     public int getPlayerRow() {
+        System.out.printf("Enter a row: ");
         int playerRow = scanner.nextInt();
         return playerRow;
-    }
-
-    public Game() {
-
     }
 }
