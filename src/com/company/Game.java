@@ -1,6 +1,12 @@
 package com.company;
 
+import java.util.Random;
+
 public class Game {
+    private Random rand = new Random();
+    private int column = rand.nextInt(5);
+    private int row = rand.nextInt(5);
+
     public String[][] mBoard = new String[][] {
             {"O", "O", "O", "O", "O"},
             {"O", "O", "O", "O", "O"},
@@ -8,6 +14,14 @@ public class Game {
             {"O", "O", "O", "O", "O"},
             {"O", "O", "O", "O", "O"}
     };
+
+    public int getmRow() {
+        return row;
+    }
+
+    public int getmCol() {
+        return column;
+    }
 
     public void printBoard() {
         for (int i = 0; i < mBoard.length; i++) {
