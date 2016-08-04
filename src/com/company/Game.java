@@ -38,7 +38,7 @@ public class Game {
     public int getPlayerRow() {
         int playerRow = 0;
         try {
-            System.out.printf("Vertical: ");
+            System.out.printf("Horizontal: ");
             playerRow = scanner.nextInt();
             while (playerRow < 1 || playerRow > 5) {
                 System.out.printf("Please enter a value between 1 and 5: ");
@@ -55,7 +55,7 @@ public class Game {
         try {
             System.out.printf("Vertical: ");
             playerCol = scanner.nextInt();
-            while (playerCol < 1 || playerCol > 5 || !Character.isDigit(playerCol)) {
+            while (playerCol < 1 || playerCol > 5 ) {
                 System.out.printf("Please enter a value between 1 and 5: ");
                 playerCol = scanner.nextInt();
             }
