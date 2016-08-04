@@ -1,5 +1,6 @@
 package com.company;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -35,14 +36,19 @@ public class Game {
     }
 
     public int getPlayerRow() {
-        System.out.printf("Enter a row: ");
+        System.out.printf("Horizontal: ");
         int playerRow = scanner.nextInt();
         return playerRow;
     }
 
     public int getPlayerCol() {
-        System.out.printf("Enter a column: ");
-        int playerCol = scanner.nextInt();
+        int playerCol = 0;
+        try {
+            System.out.printf("Vertical: ");
+            playerCol = scanner.nextInt();
+        } catch(InputMismatchException ime) {
+            System.out.println("Input must be integer");
+        }
         return playerCol;
     }
 }
