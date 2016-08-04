@@ -39,4 +39,10 @@ public class Game {
         int playerRow = scanner.nextInt();
         return playerRow;
     }
+
+    public int getPlayerCol() {
+        System.out.printf("Enter a row: ");
+        int playerCol = scanner.nextInt();
+        return playerCol;
+    }
 }
