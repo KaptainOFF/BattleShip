@@ -36,8 +36,17 @@ public class Game {
     }
 
     public int getPlayerRow() {
-        System.out.printf("Horizontal: ");
-        int playerRow = scanner.nextInt();
+        int playerRow = 0;
+        try {
+            System.out.printf("Vertical: ");
+            playerRow = scanner.nextInt();
+            while (playerRow < 1 || playerRow > 5) {
+                System.out.printf("Please enter a value between 1 and 5: ");
+                playerRow = scanner.nextInt();
+            }
+        } catch(InputMismatchException ime) {
+            System.out.println("Input must be integer");
+        }
         return playerRow;
     }
 
@@ -46,6 +55,10 @@ public class Game {
         try {
             System.out.printf("Vertical: ");
             playerCol = scanner.nextInt();
+            while (playerCol < 1 || playerCol > 5 || !Character.isDigit(playerCol)) {
+                System.out.printf("Please enter a value between 1 and 5: ");
+                playerCol = scanner.nextInt();
+            }
         } catch(InputMismatchException ime) {
             System.out.println("Input must be integer");
         }
