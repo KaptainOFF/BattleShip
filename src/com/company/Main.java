@@ -9,7 +9,7 @@ public class Main {
         while (tries < 5) {
             int playerC = game.getPlayerCol();
             int playerR = game.getPlayerRow();
-            if (((playerC - 1) == game.getRandCol() - 1) && ((playerR -1 ) == game.getRandRow() - 1)) {
+            if ((playerC == game.getRandCol()) && (playerR == game.getRandRow())) {
                 System.out.println("You Win!");
                 break;
             } else {

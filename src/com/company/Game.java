@@ -10,6 +10,7 @@ public class Game {
     private int row = rand.nextInt(5);
     Scanner scanner = new Scanner(System.in);
 
+    // Create battleship board
     public String[][] mBoard = new String[][] {
             {"O", "O", "O", "O", "O"},
             {"O", "O", "O", "O", "O"},
@@ -18,14 +19,17 @@ public class Game {
             {"O", "O", "O", "O", "O"}
     };
 
+    // Get the randomly generated row
     public int getRandRow() {
         return row;
     }
 
+    // Get the randomly generated column
     public int getRandCol() {
         return column;
     }
 
+    //Print the game board
     public void printBoard() {
         for (int i = 0; i < mBoard.length; i++) {
             for (int j = 0; j < mBoard[0].length; j++) {
