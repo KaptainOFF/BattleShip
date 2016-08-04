@@ -17,11 +17,11 @@ public class Game {
             {"O", "O", "O", "O", "O"}
     };
 
-    public int getmRow() {
+    public int getRandRow() {
         return row;
     }
 
-    public int getmCol() {
+    public int getRandCol() {
         return column;
     }
 
@@ -41,7 +41,7 @@ public class Game {
     }
 
     public int getPlayerCol() {
-        System.out.printf("Enter a row: ");
+        System.out.printf("Enter a column: ");
         int playerCol = scanner.nextInt();
         return playerCol;
     }
