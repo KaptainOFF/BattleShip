@@ -9,14 +9,15 @@ public class Main {
         while (tries < 5) {
             int playerC = game.getPlayerCol();
             int playerR = game.getPlayerRow();
-            if (((playerC - 1) == game.getRandCol()) && ((playerR - 1) == game.getRandRow())) {
+            if (((playerC - 1) == game.getRandCol() - 1) && ((playerR -1 ) == game.getRandRow() - 1)) {
                 System.out.println("You Win!");
                 break;
             } else {
-                game.mBoard[playerC][playerR] = "X";
+                game.mBoard[playerC - 1][playerR - 1] = "X";
                 game.printBoard();
             }
             tries++;
         }
+        System.out.println("Sorry, you lose!");
     }
 }
