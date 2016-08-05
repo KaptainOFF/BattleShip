@@ -10,7 +10,7 @@ public class Game {
     private int row = rand.nextInt(5);
     Scanner scanner = new Scanner(System.in);
 
-    // Create battleship board
+    // Create battleship board 5 x 5
     public String[][] mBoard = new String[][] {
             {"O", "O", "O", "O", "O"},
             {"O", "O", "O", "O", "O"},
@@ -38,7 +38,10 @@ public class Game {
             System.out.print("\n");
         }
     }
-
+    /* Get player input for row
+        checks if the input is a number and if it's in the desired range.
+        if not it will ask again
+     */
     public int getPlayerRow() {
         int playerRow = 0;
         try {
@@ -53,7 +56,10 @@ public class Game {
         }
         return playerRow;
     }
-
+    /* Get player input for column
+        checks if the input is a number and if it's in the desired range.
+        if not it will ask again
+     */
     public int getPlayerCol() {
         int playerCol = 0;
         try {
