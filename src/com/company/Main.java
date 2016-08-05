@@ -3,12 +3,12 @@ package com.company;
 import java.util.ArrayList;
 
 public class Main {
-    private static int tries = 0;
+    private static int tries = 5;
 
     public static void main(String[] args)  {
         Game game = new Game();
 
-        while (tries < 5) {
+        while (tries > 0) {
             int playerC = game.getPlayerCol();
             int playerR = game.getPlayerRow();
 
@@ -23,7 +23,7 @@ public class Main {
             } else {
                 game.mBoard[playerC - 1][playerR - 1] = "X";
                 game.printBoard();
-                tries++;
+                tries--;
                 System.out.printf("You have %d tries left.", tries);
                 System.out.println();
             }
