@@ -14,16 +14,10 @@ public class Main {
 
             try {
                 playerC = game.getPlayerCol();
-            } catch (InputMismatchException ime) {
-                System.out.println("Input must be a number!");
-            }
-
-            try {
                 playerR = game.getPlayerRow();
             } catch (InputMismatchException ime) {
                 System.out.println("Input must be a number!");
             }
-
 
             if ((playerC == game.getRandCol()) && (playerR == game.getRandRow())) {
                 System.out.println("You Win!");
