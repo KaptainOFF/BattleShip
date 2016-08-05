@@ -1,7 +1,5 @@
 package com.company;
 
-import java.util.InputMismatchException;
-
 public class Main {
     private static int tries = 5;
 

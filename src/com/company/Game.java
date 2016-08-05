@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
-
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
