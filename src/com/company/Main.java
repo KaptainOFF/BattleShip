@@ -12,12 +12,10 @@ public class Main {
 
         while (tries > 0) {
 
-            try {
-                playerC = game.getPlayerCol();
-                playerR = game.getPlayerRow();
-            } catch (InputMismatchException ime) {
-                System.out.println("Input must be a number!");
-            }
+            System.out.printf("Vertical: ");
+            playerC = game.getPlayerData();
+            System.out.printf("Horizontal: ");
+            playerR = game.getPlayerData();
 
             if ((playerC == game.getRandCol()) && (playerR == game.getRandRow())) {
                 System.out.println("You Win!");
