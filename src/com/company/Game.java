@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.org.apache.xerces.internal.impl.dv.InvalidDatatypeValueException;
+
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
@@ -42,36 +44,28 @@ public class Game {
         checks if the input is a number and if it's in the desired range.
         if not it will ask again
      */
-    public int getPlayerRow() {
+    public int getPlayerRow() throws InputMismatchException {
         int playerRow = 0;
-        try {
             System.out.printf("Horizontal: ");
             playerRow = scanner.nextInt();
             while (playerRow < 1 || playerRow > 5) {
                 System.out.printf("Please enter a value between 1 and 5: ");
                 playerRow = scanner.nextInt();
             }
-        } catch(InputMismatchException ime) {
-            System.out.println("Input must be integer");
-        }
         return playerRow;
     }
     /* Get player input for column
         checks if the input is a number and if it's in the desired range.
         if not it will ask again
      */
-    public int getPlayerCol() {
+    public int getPlayerCol() throws InputMismatchException {
         int playerCol = 0;
-        try {
             System.out.printf("Vertical: ");
             playerCol = scanner.nextInt();
             while (playerCol < 1 || playerCol > 5 ) {
                 System.out.printf("Please enter a value between 1 and 5: ");
                 playerCol = scanner.nextInt();
             }
-        } catch(InputMismatchException ime) {
-            System.out.println("Input must be integer");
-        }
         return playerCol;
     }
 }
